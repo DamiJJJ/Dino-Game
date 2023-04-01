@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &457661362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457661364}
+  - component: {fileID: 457661363}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &457661363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457661362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3088d32cbec3a4cb636f08ccc35e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - prefab: {fileID: 8394668911587239431, guid: 5197675e1bad1e045b7b1012a0060ac4, type: 3}
+    spawnChance: 0.2
+  - prefab: {fileID: 3349891360401073289, guid: 00eaef98f58f53441a33bb68528702d3, type: 3}
+    spawnChance: 0.18
+  - prefab: {fileID: 1809901049429406032, guid: da060f02b37391a41a6c81b8975525d7, type: 3}
+    spawnChance: 0.16
+  - prefab: {fileID: 748819956163038492, guid: 523ce8a0d2838914eb4c29afbc6db7fe, type: 3}
+    spawnChance: 0.14
+  - prefab: {fileID: 878032530090978562, guid: c7e9eea4a882b1841b4c4037df137395, type: 3}
+    spawnChance: 0.12
+  - prefab: {fileID: 4872250799412966377, guid: 6fec0f14ca348a94cb1016a627889d90, type: 3}
+    spawnChance: 0.1
+  - prefab: {fileID: 562252189321017953, guid: d09ea68bcf8c4c24aa4d7d8c9ca4b8ab, type: 3}
+    spawnChance: 0.05
+  minSpawnRate: 1
+  maxSpawnRate: 2
+--- !u!4 &457661364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457661362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &467169243
 GameObject:
   m_ObjectHideFlags: 0
