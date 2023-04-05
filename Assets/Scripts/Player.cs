@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
     private CharacterController character;
     private Vector3 direction;
 
+    public AudioSource jumpSound;
     public float gravity = 9.81f * 2f;
     public float jumpForce = 8f;
 
@@ -26,8 +27,9 @@ public class Player : MonoBehaviour
         {
             direction = Vector3.down;
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump") || Input.GetMouseButtonDown(0))
             {
+                jumpSound.Play();
                 direction = Vector3.up * jumpForce;
             }
         }

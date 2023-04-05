@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiscoreText;
     public Button retryButton;
+    public AudioSource gameOverSound;
+    public AudioSource bgMusic;
 
     private Player player;
     private Spawner spawner;
@@ -56,8 +58,9 @@ public class GameManager : MonoBehaviour
             Destroy(obstacle.gameObject);
         }
 
+        bgMusic.Play();
         gameSpeed = initialGameSpeed;
-        enabled = true;
+        enabled = true; 
 
         score = 0f;
         player.gameObject.SetActive(true);
@@ -70,6 +73,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        gameOverSound.Play();
+        bgMusic.Stop();
         gameSpeed = 0f;
         enabled = false;
 
