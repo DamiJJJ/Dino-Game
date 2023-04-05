@@ -10,16 +10,16 @@ public class GameManager : MonoBehaviour
     public float gameSpeedIncrease = 0.1f;
     public float gameSpeed {get; private set;}
 
-    public TextMeshProUGUI gameOverText;
+    public Canvas startMenu;
+    public Canvas gameOverMenu;
+    public Canvas scoreUI;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiscoreText;
-    public Button retryButton;
     public AudioSource gameOverSound;
     public AudioSource bgMusic;
 
     private Player player;
     private Spawner spawner;
-
     private float score;
 
     private void Awake()
@@ -46,7 +46,10 @@ public class GameManager : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
-        NewGame();
+        gameSpeed = 0f;
+        enabled = false;
+        player.gameObject.SetActive(false);
+        spawner.gameObject.SetActive(false);
     }
 
     public void NewGame()
@@ -65,8 +68,9 @@ public class GameManager : MonoBehaviour
         score = 0f;
         player.gameObject.SetActive(true);
         spawner.gameObject.SetActive(true);
-        gameOverText.gameObject.SetActive(false);
-        retryButton.gameObject.SetActive(false);
+        startMenu.gameObject.SetActive(false);
+        gameOverMenu.gameObject.SetActive(false);
+        scoreUI.gameObject.SetActive(true);
 
         UpdateHiscore();
     }
@@ -80,8 +84,7 @@ public class GameManager : MonoBehaviour
 
         player.gameObject.SetActive(false);
         spawner.gameObject.SetActive(false);
-        gameOverText.gameObject.SetActive(true);
-        retryButton.gameObject.SetActive(true);
+        gameOverMenu.gameObject.SetActive(true);
 
         UpdateHiscore();
     }
