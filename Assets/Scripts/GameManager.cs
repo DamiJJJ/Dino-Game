@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        Application.targetFrameRate = 60;
         if (Instance == this)
         {
             Instance = null;
