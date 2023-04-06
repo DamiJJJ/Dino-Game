@@ -2,7 +2,7 @@
 
 Clone of Chrome Dino game made in Unity. Another project made for Android.
 
-## Current apk version: 1.0.0
+## Current apk version: 1.0.1
 
 ## Download
 
